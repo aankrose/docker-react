@@ -7,4 +7,4 @@ before_install:
   - docker build -t aankrose/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true aankrose/docker-react npm run start
+  - docker run -e CI=true -p 3000:3000 aankrose/docker-react npm run start
